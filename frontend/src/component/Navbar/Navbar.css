@@ -1,0 +1,168 @@
+/* General Navbar styling */
+.navbar {
+  width: 100%;
+  padding: 7px 0;
+  padding-top: 0%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for the top part of the navbar */
+.navbar-top {
+  width: 100%;
+  background-color: #008080; /* Adjust color as needed */
+  padding: 10px 0;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 1px solid #e7e7e7;
+  color: #fff; /* Adjust text color as needed */
+}
+
+/* Styling for the bottom part of the navbar */
+.navbar-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding does not affect the total width */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-bottom .logo { /* Adjust as needed */
+  width: 150px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  color: #49557e;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  display: inline;
+  cursor: pointer;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.navbar-search{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-search input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  height: 30px;
+  border-radius: 4px;
+  margin: 2px;
+  border-color: tomato;
+
+  
+}
+
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative; /* Add this line to enable absolute positioning of the dot */
+}
+
+.navbar-right button {
+  padding: 5px 10px;
+  border: 1px solid tomato;
+  border-radius: 50px;
+  cursor: pointer;
+  background: transparent;
+  font-size: 16px;
+  color: #49557e;
+  transition: 0;
+}
+
+.navbar-bottom:hover {
+  background-color: #f8f8f8;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
+}
+
+.navbar-search .navbar-right {
+  position: relative;
+}
+
+.navbar-right .dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: tomato;
+  border-radius: 50%;
+  top: -5px; /* Adjust this value to position the dot vertically */
+  right: -5px; /* Adjust this value to position the dot horizontally */
+}
+
+@media (max-width: 1050px) {
+  .navbar .logo {
+      width: 140px;
+  }
+  .navbar-menu {
+      gap: 20px;
+      font-size: 17px;
+  }
+  .navbar-right {
+      gap: 30px;
+  }
+  .navbar-right img {
+      width: 22px;
+  }
+  .navbar-right button {
+      padding: 8px 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar .logo {
+      width: 120px;
+  }
+  .navbar-menu {
+      gap: 15px;
+      font-size: 16px;
+  }
+  .navbar-right {
+      gap: 20px;
+  }
+  .navbar-right img {
+      width: 20px;
+  }
+  .navbar-right button {
+      padding: 7px 20px;
+      font-size: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+      display: none;
+  }
+}

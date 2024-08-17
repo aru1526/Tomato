@@ -1,0 +1,69 @@
+.header {
+    height: 43vh; /* Change to viewport height */
+    margin: 0 auto;
+    background: url('./header_img.png') no-repeat center center; /* Center the background */
+    background-size: cover; /* Cover the entire header area */
+    position: relative; 
+}
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 25%;
+    left: 6vw;
+    animation: fadeIn 3s;
+}
+
+.header-contents h2 {
+    font-weight: 700;
+    color: white;
+    font-size: max(4.5vw, 22px);
+}
+
+.header-contents p {
+    font-size: 1vw;
+    color: white;
+}
+
+.header-contents button {
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
+}
+
+@media (max-width: 1050px) {
+    .header {
+        height: 50vh; /* Adjust height for smaller screens */
+    }
+    .header-contents {
+        max-width: 45%;
+        bottom: 20%;
+    }
+    .header-contents h2 {
+        font-size: max(4vw, 20px); /* Adjust font size */
+    }
+}
+
+@media (max-width: 750px) {
+    .header {
+        height: 60vh; /* Adjust height for even smaller screens */
+    }
+    .header-contents {
+        max-width: 65%;
+        bottom: 15%;
+    }
+    .header-contents p {
+        display: none; /* Hide paragraph text on small screens */
+    }
+    .header-contents button {
+        padding: 2vw 4vw; /* Adjust padding */
+    }
+}
